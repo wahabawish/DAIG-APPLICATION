@@ -1,0 +1,87 @@
+﻿@model DaigApplication.Models.DaigTable
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden" style="min-height: 100vh;">
+    <style>
+        .background-radial-gradient {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(650px circle at 0% 0%, hsl(218, 41%, 35%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%), radial-gradient(1250px circle at 100% 100%, hsl(218, 41%, 45%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%);
+        }
+
+        .bg-glass {
+            background-color: hsla(0, 0%, 100%, 0.8) !important;
+            backdrop-filter: saturate(200%) blur(15px);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .text-dark-blue {
+            color: hsl(210, 50%, 20%);
+        }
+
+        .text-light-blue {
+            color: hsl(210, 50%, 50%);
+        }
+
+        .text-large {
+            font-size: 1.5rem;
+        }
+
+        .text-xl {
+            font-size: 2rem;
+        }
+
+        .button-container {
+            margin-top: 1.5rem;
+        }
+    </style>
+
+    <div class="container-fluid px-4 py-5">
+        <div class="bg-glass rounded-3">
+            <div class="text-center mb-4">
+                <img style="width: 200px;" src="https://www.zarla.com/images/zarla-chef-cater-1x1-2400x2400-20211026-v769dxdqdhydpqbqjff6.png?crop=1:1,smart&width=250&dpr=2" alt="Alternate Text" />
+                <h1 class="text-dark-blue text-xl">Delete</h1>
+                <h3 class="text-light-blue text-large">Are you sure you want to delete this?</h3>
+            </div>
+
+            <hr class="my-4" />
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="mb-4">
+                        <h4 class="text-dark-blue text-large text-center">Catering Details</h4>
+                        <dl class="row">
+                            <div class="col-sm-4">
+                                <p class="text-large">TYPE</p>
+                                <dd class="text-light-blue text-large">@Html.DisplayFor(model => model.DaigType)</dd>
+                            </div>
+                            <div class="col-sm-4">
+                                <p class="text-large">STATUS</p>
+                                <dd class="text-light-blue text-large">@Html.DisplayFor(model => model.DaigStatus)</dd>
+                            </div>
+                            <div class="col-sm-4">
+                                <p class="text-large">AVAILABILITY</p>
+                                <dd class="text-light-blue text-large">@Html.DisplayFor(model => model.DaigAvailability)</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div class="button-container text-center">
+                        <form asp-action="Delete">
+                            <input type="hidden" asp-for="Id" />
+                            <button type="submit" class="btn btn-danger btn-lg">Delete</button>
+                        </form>
+                        <div class="mt-4">
+                            <a asp-action="Index" class="btn btn-outline-dark btn-lg">Back to List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

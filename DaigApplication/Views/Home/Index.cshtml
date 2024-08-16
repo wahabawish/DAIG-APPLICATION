@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="img-container">
+        <a href="@Url.Action("Index", "AuthAdmins")">
+            <img class="imgsizeis" src="https://www.zarla.com/images/zarla-chef-cater-1x1-2400x2400-20211026-v769dxdqdhydpqbqjff6.png?crop=1:1,smart&width=250&dpr=2" alt="Alternate Text" />
+        </a>
+    </div>
+    <h1 class="mt-4">Welcome to Our Page</h1>
+    <p class="lead">Discover amazing content and more</p>
+</div>
+
+<style>
+    body {
+        background-color: #f8f9fa; /* Light background color */
+        font-family: Arial, sans-serif; /* Clean font */
+    }
+
+    .container {
+        text-align: center;
+        padding: 50px 15px;
+    }
+
+    .img-container {
+        display: inline-block;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .img-container:hover {
+            transform: scale(1.05);
+        }
+
+    .imgsizeis {
+        width: 100%;
+        height: auto;
+    }
+</style>

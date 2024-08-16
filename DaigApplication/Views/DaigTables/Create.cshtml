@@ -1,0 +1,60 @@
+﻿@model DaigApplication.Models.DaigTable
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden" style="min-height: 100vh;">
+    <style>
+        .background-radial-gradient {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(650px circle at 0% 0%, hsl(218, 41%, 35%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%), radial-gradient(1250px circle at 100% 100%, hsl(218, 41%, 45%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%);
+        }
+
+        .bg-glass {
+            background-color: hsla(0, 0%, 100%, 0.9) !important;
+            backdrop-filter: saturate(200%) blur(25px);
+            padding: 2rem;
+        }
+    </style>
+
+    <div class="container-fluid px-4 py-5">
+        <div class="bg-glass rounded-3 shadow-5-strong row justify-content-center">
+            <img style="width: 200px;" src="https://www.zarla.com/images/zarla-chef-cater-1x1-2400x2400-20211026-v769dxdqdhydpqbqjff6.png?crop=1:1,smart&width=250&dpr=2" alt="Alternate Text" />
+
+            <hr />
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <div class="form-group mb-3">
+                            <input asp-for="DaigType" placeholder="Daig Type" class="form-control form-control-lg" />
+                            <span asp-validation-for="DaigType" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input asp-for="DaigStatus" placeholder="Daig Status" class="form-control form-control-lg" />
+                            <span asp-validation-for="DaigStatus" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input asp-for="DaigAvailability" placeholder="Daig Availability" class="form-control form-control-lg" />
+                            <span asp-validation-for="DaigAvailability" class="text-danger"></span>
+                        </div>
+                        <div class="text-center">
+                            <input type="submit" value="Create" class="btn btn-primary btn-lg" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a asp-action="Index" class="btn btn-outline-dark">Back to List</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

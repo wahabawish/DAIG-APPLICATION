@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pc\\source\\repos\\DaigApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FBD14792-FF60-407B-A521-3FF0726DC8E5}|DaigApplication\\DaigApplication.csproj|c:\\users\\pc\\source\\repos\\daigapplication\\daigapplication\\views\\authadmins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FBD14792-FF60-407B-A521-3FF0726DC8E5}|DaigApplication\\DaigApplication.csproj|solutionrelative:daigapplication\\views\\authadmins\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBD14792-FF60-407B-A521-3FF0726DC8E5}|DaigApplication\\DaigApplication.csproj|c:\\users\\pc\\source\\repos\\daigapplication\\daigapplication\\views\\authadmins\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FBD14792-FF60-407B-A521-3FF0726DC8E5}|DaigApplication\\DaigApplication.csproj|solutionrelative:daigapplication\\views\\authadmins\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBD14792-FF60-407B-A521-3FF0726DC8E5}|DaigApplication\\DaigApplication.csproj|c:\\users\\pc\\source\\repos\\daigapplication\\daigapplication\\controllers\\authadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBD14792-FF60-407B-A521-3FF0726DC8E5}|DaigApplication\\DaigApplication.csproj|solutionrelative:daigapplication\\controllers\\authadminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1208,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\DaigApplication\\DaigApplication\\Views\\AuthAdmins\\Create.cshtml",
+              "RelativeDocumentMoniker": "DaigApplication\\Views\\AuthAdmins\\Create.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\DaigApplication\\DaigApplication\\Views\\AuthAdmins\\Create.cshtml",
+              "RelativeToolTip": "DaigApplication\\Views\\AuthAdmins\\Create.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACsAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T15:20:18.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\DaigApplication\\DaigApplication\\Views\\AuthAdmins\\Index.cshtml",
+              "RelativeDocumentMoniker": "DaigApplication\\Views\\AuthAdmins\\Index.cshtml",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\DaigApplication\\DaigApplication\\Views\\AuthAdmins\\Index.cshtml",
+              "RelativeToolTip": "DaigApplication\\Views\\AuthAdmins\\Index.cshtml",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAIwFwAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-16T13:34:38.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthAdminsController.cs",
+              "DocumentMoniker": "C:\\Users\\pc\\source\\repos\\DaigApplication\\DaigApplication\\Controllers\\AuthAdminsController.cs",
+              "RelativeDocumentMoniker": "DaigApplication\\Controllers\\AuthAdminsController.cs",
+              "ToolTip": "C:\\Users\\pc\\source\\repos\\DaigApplication\\DaigApplication\\Controllers\\AuthAdminsController.cs",
+              "RelativeToolTip": "DaigApplication\\Controllers\\AuthAdminsController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-16T13:31:49.217Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

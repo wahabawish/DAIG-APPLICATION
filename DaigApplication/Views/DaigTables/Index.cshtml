@@ -1,0 +1,146 @@
+﻿@model IEnumerable<DaigApplication.Models.DaigTable>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden" style="min-height: 100vh;">
+    <style>
+        .background-radial-gradient {
+            background-color: hsl(218, 41%, 15%);
+            background-image: radial-gradient(650px circle at 0% 0%, hsl(218, 41%, 35%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%), radial-gradient(1250px circle at 100% 100%, hsl(218, 41%, 45%) 15%, hsl(218, 41%, 30%) 35%, hsl(218, 41%, 20%) 75%, hsl(218, 41%, 19%) 80%, transparent 100%);
+        }
+
+        .bg-glass {
+            background-color: hsla(0, 0%, 100%, 0.8) !important;
+            backdrop-filter: saturate(200%) blur(20px);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .table-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .table {
+            font-size: 1.2rem;
+            color: black;
+        }
+
+            .table thead {
+                background-color: hsl(210, 20%, 20%);
+                color: hsl(0, 0%, 100%);
+            }
+
+            .table tbody tr:hover {
+                background-color: hsl(210, 10%, 65%);
+            }
+
+        .btn-custom {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            margin: 0.2rem;
+            border: 1px solid hsl(210, 20%, 30%);
+            background-color: transparent;
+            color: hsl(210, 20%, 30%);
+            border-radius: 0.25rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .btn-custom:hover {
+                background-color: hsl(210, 20%, 80%);
+                color: hsl(0, 0%, 100%);
+            }
+
+        .btn-primary {
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid hsl(210, 20%, 60%);
+            background-color: transparent;
+            color: hsl(210, 20%, 60%);
+            border-radius: 0.25rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+            .btn-primary:hover {
+                background-color: hsl(210, 20%, 60%);
+                color: hsl(0, 0%, 100%);
+            }
+
+        .royal-font {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem; /* Adjust size as needed */
+            color: hsl(0, 0%, 100%);
+        }
+    </style>
+
+    <div class="container-fluid py-5">
+        <h2 class="text-center royal-font">Catering Details</h2>
+        <div class="bg-glass table-container rounded-3 shadow-5-strong">
+            <table class="table table-hover table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.DaigType)</th>
+                        <th>@Html.DisplayNameFor(model => model.DaigStatus)</th>
+                        <th>@Html.DisplayNameFor(model => model.DaigAvailability)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.DaigType)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DaigStatus)</td>
+                            <td>@Html.DisplayFor(modelItem => item.DaigAvailability)</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-custom">Edit</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-custom">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-custom">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <p class="text-center mt-4">
+            <a asp-action="Create" class="btn btn-primary btn-lg">Create New</a>
+        </p>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!("Notification" in window)) {
+            return;
+        }
+
+        if (Notification.permission !== "granted") {
+            Notification.requestPermission();
+        }
+
+        var rows = document.querySelectorAll('tbody tr');
+
+        rows.forEach(function (row) {
+            var availabilityCell = row.querySelector('td:nth-child(3)');
+            var typeCell = row.querySelector('td:nth-child(1)');
+            var statusCell = row.querySelector('td:nth-child(2)');
+
+            if (availabilityCell && availabilityCell.textContent.trim().toLowerCase() === 'available') {
+                var daigType = typeCell ? typeCell.textContent.trim() : 'Unknown Type';
+                var daigStatus = statusCell ? statusCell.textContent.trim() : 'Unknown Status';
+
+                if (Notification.permission === "granted") {
+                    new Notification("Daig Availability Alert", {
+                        body: `Daig Type: ${daigType}\nStatus: ${daigStatus} is now available!`,
+                        icon: "path/to/icon.png"
+                    });
+                }
+            }
+        });
+    });
+</script>
